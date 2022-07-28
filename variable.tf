@@ -9,3 +9,6 @@ variable"aws_instance"{
 
 variable "aws_sg"{
 }
+
+variable "aws_region"{
+}

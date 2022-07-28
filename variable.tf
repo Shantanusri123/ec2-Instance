@@ -1,6 +1,3 @@
-variable "aws_name"{
-}
-
 variable "aws_ami"{
 }
 

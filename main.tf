@@ -3,7 +3,7 @@ data "terraform_remote_state" "security_group_info"{
   config = {
     bucket               = "terraform-state-for-us"
     key                  = "dev-terraform-state/terraform.tfstate"
-    region  = var.region
+    region  = var.aws_region
     profile = "aws_profile_dev"
   }
 }

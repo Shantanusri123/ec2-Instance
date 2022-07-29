@@ -8,3 +8,5 @@ variable "aws_region"{
 }
 
 variable "aws_name"{}
+
+variable "environment_key" {}

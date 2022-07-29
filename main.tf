@@ -6,13 +6,12 @@ data "terraform_remote_state" "security_group_info"{
     region  = var.region
     profile = "aws_profile_dev"
   }
-  
 }
 
 resource "aws_instance" "ec2vm" {
   ami = var.aws_ami
   instance_type = var.aws_instance
-  security_groups = [data.dev-terraform-state.security_group_info.outputs.
+  security_groups = [data.terraform_remote_state.security_group_info.outputs.sg_id.value]
   tags = {
     Name = var.aws_name
   }

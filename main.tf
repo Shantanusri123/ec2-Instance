@@ -11,7 +11,7 @@ data "terraform_remote_state" "security_group_info"{
 resource "aws_instance" "ec2vm" {
   ami = var.aws_ami
   instance_type = var.aws_instance
-  security_groups = [data.terraform_remote_state.security_group_info.outputs.sg_id]
+  vpc_security_group_ids = [data.terraform_remote_state.security_group_info.outputs.sg_id]
   tags = {
     Name = var.aws_name
   }

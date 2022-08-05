@@ -1,7 +1,7 @@
 data "terraform_remote_state" "security_group_info"{
   backend = "s3"
   config = {
-    bucket               = "terraform-state-for-us-again"
+    bucket               = "terraform-state-for-us-again-gain"
     key                  = var.environment_key
     region  = var.aws_region
     profile = "aws_profile_dev"
